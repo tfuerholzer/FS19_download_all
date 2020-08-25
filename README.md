@@ -1,5 +1,4 @@
 # FS19 Download All mods
-Script that downloads all mods from Farming-Simulator 2019's Site. Becaue manually going through takes ages.
 
 Just download main.py, get Python 3.xx and install beautifulsoup4 with pip. I recommend pycharm if you aren't familiar with this process.
 
