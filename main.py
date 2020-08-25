@@ -4,14 +4,16 @@ from urllib.request import urlopen as httpget
 
 from bs4 import BeautifulSoup
 
-OUTPUT_PATH = "C:/lsmods"
-MAX_PAGES = 200
+# install with 'pip install beautifulsoup4'
+
+OUTPUT_PATH = "C:/lsmods"  # path where downloaded mods are saved to.
+MAX_PAGES = 200  # max number of Pages the script will attempt to download
+DOWNLOAD_FILE_THREADS = 15  # number of download threads
+BANNED_CATEGORIES = ['Gameplay', 'Prefab']  # category of mods that won't be downloaded
+
 BASE_URL = 'https://farming-simulator.com/mods.php?lang=de&country=de&title=fs2019&filter=latest&page='
 BASE_FINAL_URL = 'https://farming-simulator.com/'
 URL_FORMAT = '{}{}'
-DOWNLOAD_FILE_THREADS = 15
-ALL_URLS = []
-BANNED_CATEGORIES = ['Gameplay', 'Prefab']
 
 download_bound_pool = ThreadPoolExecutor(max_workers=DOWNLOAD_FILE_THREADS)
 
